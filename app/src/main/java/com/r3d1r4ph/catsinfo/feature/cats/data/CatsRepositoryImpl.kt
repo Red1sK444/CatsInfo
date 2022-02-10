@@ -4,17 +4,15 @@ import androidx.paging.PagingSource
 import com.r3d1r4ph.catsinfo.database.CatEntity
 import com.r3d1r4ph.catsinfo.feature.cats.domain.CatsRepository
 
-class CatsRepositoryImpl : CatsRepository {
+class CatsRepositoryImpl(private val catsLocalDatasource: CatsLocalDatasource) : CatsRepository {
 
-    override fun getAll(): PagingSource<Int, CatEntity> {
-        TODO("Not yet implemented")
-    }
+    override fun getAll(): PagingSource<Int, CatEntity> = catsLocalDatasource.pagingSource()
 
     override suspend fun insertAll(catEntities: List<CatEntity>) {
-        TODO("Not yet implemented")
+        catsLocalDatasource.insertAll(catEntities)
     }
 
     override suspend fun clearAll() {
-        TODO("Not yet implemented")
+        catsLocalDatasource.clearAll()
     }
 }
