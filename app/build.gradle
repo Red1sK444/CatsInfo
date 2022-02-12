@@ -68,4 +68,13 @@ dependencies {
 
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:2.4.1")
+
+    //recycler
+    implementation 'androidx.recyclerview:recyclerview:1.2.1@aar'
+
+    //paging recycler
+    implementation("androidx.paging:paging-runtime-ktx:3.1.0")
+
+    //load image
+    implementation 'io.coil-kt:coil:1.1.1'
 }

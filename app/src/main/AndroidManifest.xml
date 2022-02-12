@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CatsInfo">
         <activity
-            android:name=".feature.cats.list.ListActivity"
+            android:name=".feature.cats.list.presentation.ListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
