@@ -6,7 +6,6 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.r3d1r4ph.catsinfo.database.AppDatabase
-import com.r3d1r4ph.catsinfo.database.CatEntity
 import com.r3d1r4ph.catsinfo.feature.cats.list.domain.ClearCatsUseCase
 import com.r3d1r4ph.catsinfo.feature.cats.list.domain.InsertCatsUseCase
 import com.r3d1r4ph.catsinfo.serverapi.cats.CatsService
@@ -22,7 +21,7 @@ class CatsRemoteMediator(
 ) : RemoteMediator<Int, CatEntity>() {
 
     companion object {
-        const val PAGE_SIZE = 5
+        const val PAGE_SIZE = 6
         private const val DEFAULT_PAGE_INDEX = 0
     }
 

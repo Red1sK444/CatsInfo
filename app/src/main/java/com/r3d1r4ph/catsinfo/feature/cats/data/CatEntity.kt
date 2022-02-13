@@ -1,4 +1,4 @@
-package com.r3d1r4ph.catsinfo.database
+package com.r3d1r4ph.catsinfo.feature.cats.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
