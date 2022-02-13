@@ -2,7 +2,6 @@ package com.r3d1r4ph.catsinfo.feature.cats.data
 
 import androidx.paging.*
 import com.r3d1r4ph.catsinfo.database.AppDatabase
-import com.r3d1r4ph.catsinfo.database.CatEntity
 import com.r3d1r4ph.catsinfo.feature.cats.domain.CatItem
 import com.r3d1r4ph.catsinfo.feature.cats.domain.CatsRepository
 import com.r3d1r4ph.catsinfo.feature.cats.list.domain.ClearCatsUseCase

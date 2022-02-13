@@ -5,7 +5,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.r3d1r4ph.catsinfo.database.CatEntity
 
 @Dao
 interface CatDao: CatsLocalDatasource {

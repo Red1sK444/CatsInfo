@@ -1,6 +1,6 @@
 package com.r3d1r4ph.catsinfo.serverapi.cats
 
-import com.r3d1r4ph.catsinfo.database.CatEntity
+import com.r3d1r4ph.catsinfo.feature.cats.data.CatEntity
 import kotlinx.serialization.Serializable
 
 @Serializable
