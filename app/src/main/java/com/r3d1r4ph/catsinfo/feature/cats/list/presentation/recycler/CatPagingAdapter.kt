@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.r3d1r4ph.catsinfo.R
 import com.r3d1r4ph.catsinfo.databinding.ItemRecyclerBinding
+import com.r3d1r4ph.catsinfo.feature.cats.domain.CatItem
 
-class CatPagingAdapter : PagingDataAdapter<CatItem, CatPagingAdapter.ViewHolder>(DIFF) {
+class CatPagingAdapter(private val listener: (CatItem) -> Unit) :
+    PagingDataAdapter<CatItem, CatPagingAdapter.ViewHolder>(DIFF) {
 
     private companion object {
         val DIFF = object : DiffUtil.ItemCallback<CatItem>() {
@@ -22,8 +24,16 @@ class CatPagingAdapter : PagingDataAdapter<CatItem, CatPagingAdapter.ViewHolder>
         }
     }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemRecyclerBinding.bind(view)
+
+        init {
+            binding.root.setOnClickListener {
+                getItem(bindingAdapterPosition)?.let { it1 ->
+                    listener.invoke(it1)
+                }
+            }
+        }
 
         fun bind(catItem: CatItem) {
             binding.itemImageView.load(catItem.url)

@@ -18,4 +18,5 @@ interface CatDao: CatsLocalDatasource {
 
     @Query("SELECT * FROM cat")
     override fun pagingSource(): PagingSource<Int, CatEntity>
+
 }
