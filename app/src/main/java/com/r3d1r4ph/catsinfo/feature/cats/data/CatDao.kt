@@ -19,4 +19,6 @@ interface CatDao: CatsLocalDatasource {
     @Query("SELECT * FROM cat")
     override fun pagingSource(): PagingSource<Int, CatEntity>
 
+    @Query("SELECT * FROM cat WHERE id = :catId")
+    override suspend fun getCatById(catId: String): CatEntity
 }

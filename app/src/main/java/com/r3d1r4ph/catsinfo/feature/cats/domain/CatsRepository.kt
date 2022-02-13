@@ -11,4 +11,6 @@ interface CatsRepository {
     suspend fun insertAll(catEntities: List<CatEntity>)
 
     suspend fun clearAll()
+
+    suspend fun getCatById(catId: String): CatEntity
 }

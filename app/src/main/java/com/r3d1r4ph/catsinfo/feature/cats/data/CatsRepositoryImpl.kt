@@ -3,10 +3,10 @@ package com.r3d1r4ph.catsinfo.feature.cats.data
 import androidx.paging.*
 import com.r3d1r4ph.catsinfo.database.AppDatabase
 import com.r3d1r4ph.catsinfo.database.CatEntity
-import com.r3d1r4ph.catsinfo.feature.cats.domain.CatsRepository
-import com.r3d1r4ph.catsinfo.feature.cats.domain.ClearCatsUseCase
-import com.r3d1r4ph.catsinfo.feature.cats.domain.InsertCatsUseCase
 import com.r3d1r4ph.catsinfo.feature.cats.domain.CatItem
+import com.r3d1r4ph.catsinfo.feature.cats.domain.CatsRepository
+import com.r3d1r4ph.catsinfo.feature.cats.list.domain.ClearCatsUseCase
+import com.r3d1r4ph.catsinfo.feature.cats.list.domain.InsertCatsUseCase
 import com.r3d1r4ph.catsinfo.serverapi.cats.CatsService
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -23,6 +23,8 @@ class CatsRepositoryImpl(
     override suspend fun clearAll() {
         catsLocalDatasource.clearAll()
     }
+
+    override suspend fun getCatById(catId: String) = catsLocalDatasource.getCatById(catId)
 
     @OptIn(ExperimentalPagingApi::class)
     override fun letCatsFlow(): Flow<PagingData<CatItem>> {

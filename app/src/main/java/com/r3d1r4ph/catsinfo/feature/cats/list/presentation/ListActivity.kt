@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.r3d1r4ph.catsinfo.R
 import com.r3d1r4ph.catsinfo.databinding.ActivityListBinding
-import com.r3d1r4ph.catsinfo.feature.cats.details.DetailsActivity
+import com.r3d1r4ph.catsinfo.feature.cats.details.presentation.DetailsActivity
 import com.r3d1r4ph.catsinfo.feature.cats.domain.CatItem
 import com.r3d1r4ph.catsinfo.feature.cats.list.presentation.recycler.CatItemDecoration
 import com.r3d1r4ph.catsinfo.feature.cats.list.presentation.recycler.CatPagingAdapter
@@ -52,6 +52,7 @@ class ListActivity : AppCompatActivity() {
 
     private fun openDetailsScreen(catId: String) {
         val intent = Intent(this, DetailsActivity::class.java)
+            .putExtra(DetailsActivity.CAT_ID, catId)
         startActivity(intent)
     }
 }

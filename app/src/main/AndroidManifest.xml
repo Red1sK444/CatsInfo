@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".feature.cats.details.DetailsActivity"
+            android:name=".feature.cats.details.presentation.DetailsActivity"
             android:exported="true" />
     </application>
 

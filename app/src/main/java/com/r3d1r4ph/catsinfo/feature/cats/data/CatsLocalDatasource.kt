@@ -10,4 +10,6 @@ interface CatsLocalDatasource {
     suspend fun clearAll()
 
     fun pagingSource(): PagingSource<Int, CatEntity>
+
+    suspend fun getCatById(catId: String): CatEntity
 }

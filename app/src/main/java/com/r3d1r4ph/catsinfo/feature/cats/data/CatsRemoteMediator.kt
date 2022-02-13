@@ -7,8 +7,8 @@ import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.r3d1r4ph.catsinfo.database.AppDatabase
 import com.r3d1r4ph.catsinfo.database.CatEntity
-import com.r3d1r4ph.catsinfo.feature.cats.domain.ClearCatsUseCase
-import com.r3d1r4ph.catsinfo.feature.cats.domain.InsertCatsUseCase
+import com.r3d1r4ph.catsinfo.feature.cats.list.domain.ClearCatsUseCase
+import com.r3d1r4ph.catsinfo.feature.cats.list.domain.InsertCatsUseCase
 import com.r3d1r4ph.catsinfo.serverapi.cats.CatsService
 import retrofit2.HttpException
 import java.io.IOException
